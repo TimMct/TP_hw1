@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>hw1</groupId>
-  <artifactId>hw1</artifactId>
+  <groupId>PT2019.hw1</groupId>
+  <artifactId>HomeWork1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>hw1</name>
+  <name>HomeWork1</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -18,8 +18,21 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
+      <exclusions>
+      	<exclusion>
+      		<groupId>org.hamcrest</groupId>
+      		<artifactId>hamcrest-core</artifactId>
+      	</exclusion>
+      </exclusions>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.hamcrest</groupId>
+    	<artifactId>hamcrest-library</artifactId>
+    	<version>1.3</version>
+    	<scope>test</scope>
     </dependency>
   </dependencies>
 </project>

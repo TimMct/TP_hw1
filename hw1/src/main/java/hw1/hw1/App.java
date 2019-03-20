@@ -1,13 +1,11 @@
 package hw1.hw1;
 
-/**
- * Hello world!
- *
- */
+import hw1.hw1.view.*;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        new Window();
     }
 }
