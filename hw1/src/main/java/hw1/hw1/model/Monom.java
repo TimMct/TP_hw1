@@ -85,5 +85,14 @@ public class Monom {
 		else
 			return coef+"X^"+exp;
 	}
+	
+	@Override
+	public boolean equals(Object mon) {
+		if(mon instanceof Monom) {
+			if(this.getCoef() == ((Monom)mon).getCoef() && this.getExp() == ((Monom)mon).getExp())
+				return true;
+		}
+		return false;
+	}
 }
 

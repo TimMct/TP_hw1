@@ -30,6 +30,12 @@ public class Polinom {
 	}
 	
 	
+	
+	public ArrayList<Monom> getMonoms() {
+		return this.monoms;
+	}
+	
+	
 	public int grad() {
 		return this.monoms.size() - 1;
 	}
@@ -184,4 +190,18 @@ public class Polinom {
 		}
 		return poli;
 	}
+	
+	@Override
+	public boolean equals(Object poli) {
+		if(poli instanceof Polinom)
+			if(this.getMonoms().size() == ((Polinom) poli).getMonoms().size()) {
+				for(int i=0; i<this.getMonoms().size(); i++) 
+					if(this.getMonoms().get(i).equals(((Polinom) poli).getMonoms().get(i)) == false)
+						return false;
+			return true;
+			}
+		return false;
+	}
+	
+	
 }
